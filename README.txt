@@ -17,3 +17,6 @@ caffe time -model model_file -iterations 100
 
 # Step6: train the model
 caffe train solver_file 2>&1 | tee train.log
+
+# Step7: draw statistical chart
+$ python ../caffe/tools/extra/plot_training_log.py.example 0 accuracy_iters.png train.log
